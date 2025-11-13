@@ -11,14 +11,8 @@ module model #(parameter DATA_WIDTH = 32, ADDR_WIDTH = 5) (
 );
 
     logic [DATA_WIDTH - 1:0] registers [31:0];
-
-    initial begin
-        for(int i = 0; i < 32; i++) begin
-            registers[i] = 'b0;
-        end
-    end
-
-    always(@(posedge clk)) begin
+    
+    always @(posedge clk) begin
         if (!resetn) begin
             for(int i = 0; i < 32; i++) begin
                 registers[i] <= 'b0;
