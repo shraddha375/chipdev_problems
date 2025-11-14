@@ -18,5 +18,6 @@ Output signals during reset
 Example
 
 In the example, BITWIDTH = 3.  Initially, resetn is 0 and dout is reset.  The module's internal counter is also reset to zero.  After resetn is released, the module's internal counter starts.  In the subsequent cycles, din takes different values which are stored in the module's internal memory.  When sortit is asserted, the output dout = 000_001_010_011.  Note that, the most significant bits of dout correspond to the smallest value whereas the least significant bits of dout correspond to the largest value.
+
 <img width="358" height="129" alt="Screenshot 2025-11-14 124432" src="https://github.com/user-attachments/assets/3ffdef61-c459-4601-843f-bbaa8cb9016c" />
 
